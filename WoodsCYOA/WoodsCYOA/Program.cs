@@ -20,7 +20,7 @@ namespace WoodsCYOA
             string catName = Console.ReadLine();
 
             Console.WriteLine(dogName + " and " + catName + " head in opposite directions.");
-            //Reader chooses animal to follow
+            //Reader chooses animal to follow once I learn how to do that.
             System.Console.ReadKey();
             Console.WriteLine("Will you follow:");
             Console.WriteLine(dogName + "?");
