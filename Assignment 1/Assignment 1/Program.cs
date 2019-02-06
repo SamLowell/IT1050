@@ -21,29 +21,30 @@ namespace Assignment_1
             double heightInches;
             double totalHeightCM;
 
-            System.Console.Write("What is your first name? ");
-            firstName = System.Console.ReadLine();
-            System.Console.Write("What is your middle initial? ");
-            middleInitail = System.Console.ReadLine();
-            System.Console.Write("What is your last name? ");
-            lastName = System.Console.ReadLine();
+            Console.Write("What is your first name? ");
+            firstName = Console.ReadLine();
+            Console.Write("What is your middle initial? ");
+            middleInitail = Console.ReadLine();
+            Console.Write("What is your last name? ");
+            lastName = Console.ReadLine();
 
-            System.Console.Write("How many feet tall are you? ");
-            heightFeet = int.Parse(System.Console.ReadLine());
-            System.Console.Write("How many remaining inches tall are you? ");
-            heightInches = double.Parse(System.Console.ReadLine());
+            Console.Write("How many feet tall are you? ");
+            heightFeet = int.Parse(Console.ReadLine());
+            Console.Write("How many remaining inches tall are you? ");
+            heightInches = double.Parse(Console.ReadLine());
             totalHeightCM = (heightInches + heightFeet * 12) * 2.54;
-           
-            System.Console.Write("How old are you? ");
-            age = int.Parse(System.Console.ReadLine());
-            System.Console.Write("You are a US citizen.  True or False? ");
-            isCitizen = bool.Parse(System.Console.ReadLine());
+                    
+            Console.Write("How old are you? ");
+            age = int.Parse(Console.ReadLine());
+            Console.Write("Are you a US citizen? ");
+            isCitizenstring = Console.ReadLine().ToLower();
+            bool isCitizen = isCitizenstring.Contains("y") || isCitizenString.Contains("t");
             canVote = age >= 18 && isCitizen;
 
-            System.Console.WriteLine("Name: " + firstName + " " + middleInitail + ". " + lastName);
-            System.Console.WriteLine("Height: " + totalHeightCM + "cm");
-            System.Console.WriteLine("Able to vote: " + canVote);
-            System.Console.ReadKey();
+            Console.WriteLine("Name: " + firstName + " " + middleInitail + ". " + lastName);
+            Console.WriteLine("Height: " + totalHeightCM + "cm");
+            Console.WriteLine("Able to vote: " + canVote);
+            Console.ReadKey();
         }
     }
 }

@@ -25,8 +25,8 @@ namespace WoodsCYOA
             Console.WriteLine("Will you follow:");
             Console.WriteLine(dogName + "?");
             Console.WriteLine(catName + "?");
-
-            System.Console.ReadKey();
+            
+            
         }
     }
 }
