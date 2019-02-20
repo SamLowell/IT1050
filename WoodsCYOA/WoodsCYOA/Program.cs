@@ -9,22 +9,27 @@ namespace WoodsCYOA
     class Program
     {
         static void Main(string[] args)
-        {  //short story using Console.Write and Console.Read
+        {
+            Pet dog = new Pet();
+            Pet cat = new Pet();
+
             Console.WriteLine("You are walking on a path in the woods.");
             System.Console.ReadKey();
             Console.WriteLine("Ahead of you there is a dog and a cat.");
             System.Console.ReadKey();
             Console.Write("What is the dog's name? ");
-            string dogName = Console.ReadLine();
-            Console.Write("What is the cat's name? ");
-            string catName = Console.ReadLine();
+            dog.Name = Console.ReadLine();
 
-            Console.WriteLine(dogName + " and " + catName + " head in opposite directions.");
+            Console.Write("What is the cat's name? ");
+            cat.Name = Console.ReadLine();            
+
+            Console.WriteLine(dog.Name + " and " + cat.Name + " head in opposite directions.");
             //Reader chooses animal to follow once I learn how to do that.
             System.Console.ReadKey();
             Console.WriteLine("Will you follow:");
-            Console.WriteLine(dogName + "?");
-            Console.WriteLine(catName + "?");
+            Console.WriteLine(dog.Name + "?");
+            Console.WriteLine(cat.Name + "?");
+            Console.ReadKey();
             
             
         }
