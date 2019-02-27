@@ -17,7 +17,7 @@ namespace WoodsCYOA
             System.Console.ReadKey();
             Console.WriteLine("Ahead of you there is a dog and a cat.");
             System.Console.ReadKey();
-            Console.Write("What is the dog's name? ");
+            
             dog.Name = Console.ReadLine();
 
             Console.Write("What is the cat's name? ");
