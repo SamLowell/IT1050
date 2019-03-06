@@ -16,8 +16,12 @@ namespace Assignment2
         //static variable, sum of all ages
         public static double SumOfAges;
 
-        public void AskAge()
+        public void AskNameAge()
         {
+            Console.Write("What is your first name? ");
+            this.FirstName = Console.ReadLine();
+            Console.Write("What is your last name? ");
+            this.LastName = Console.ReadLine();
             Console.Write("How old are you? ");
             this.Age = int.Parse(Console.ReadLine());
             SumOfAges += this.Age;
@@ -26,14 +30,11 @@ namespace Assignment2
 
         public string GetFullName()
         {
-            Console.Write("What is your first name? ");
-            this.FirstName = Console.ReadLine();
-            Console.Write("What is your last name? ");
-            this.LastName = Console.ReadLine();
-            return GetFullName();
+            string FullName;
+            return FullName = this.FirstName + " " + this.LastName + " ";
         }
 
-        //are you married?
+        
 
         //void PrintNameandAge()
         

@@ -11,12 +11,16 @@ namespace Assignment2
         static void Main(string[] args)
         {
             Person person1 = new Person();
-            person1.GetFullName();
-            person1.AskAge();
+            person1.AskNameAge();
 
             Person person2 = new Person();
 
-        
+
+            //constructors
+            //like a non-void method, always get constructor for free
+            //every time create "new"
+            //default value for object
+            //same name as class and no return type
 
         }
     }
