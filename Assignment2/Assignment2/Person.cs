@@ -12,10 +12,10 @@ namespace Assignment2
         public string LastName;
         public int Age;
         public Person Spouse;
-
-        //static variable, sum of all ages
+                
         public static double SumOfAges;
-
+            
+                
         public void AskNameAge()
         {
             Console.Write("What is your first name? ");
@@ -25,19 +25,34 @@ namespace Assignment2
             Console.Write("How old are you? ");
             this.Age = int.Parse(Console.ReadLine());
             SumOfAges += this.Age;
-        }
-        
 
+        }
+
+        public void AskSpouseNameAge()
+        {
+            Spouse = new Person();
+            Console.Write("If married what is your spouses name? ");
+            Spouse.FirstName = Console.ReadLine();
+            Spouse.LastName = LastName;
+            Console.Write("How old is your spouse? ");
+            Spouse.Age = int.Parse(Console.ReadLine());
+            SumOfAges += Spouse.Age;
+            
+        }
+            
         public string GetFullName()
         {
-            string FullName;
-            return FullName = this.FirstName + " " + this.LastName + " ";
+            return this.FirstName + " " + this.LastName + " ";
+
+        }
+                                       
+        public void PrintNameandAge()
+        {
+            Console.WriteLine("");
+            Console.WriteLine(GetFullName());
+            Console.WriteLine(this.Age);
         }
 
         
-
-        //void PrintNameandAge()
-        
-
     }
 }

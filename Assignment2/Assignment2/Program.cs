@@ -10,18 +10,25 @@ namespace Assignment2
     {
         static void Main(string[] args)
         {
+            Person.SumOfAges = 0;
+
             Person person1 = new Person();
             person1.AskNameAge();
+            person1.AskSpouseNameAge();
 
             Person person2 = new Person();
+            person2.AskNameAge();
+            person2.AskSpouseNameAge();
+            
+            person1.PrintNameandAge();
+            person1.Spouse.PrintNameandAge();
+            person2.PrintNameandAge();
+            person2.Spouse.PrintNameandAge();
 
-
-            //constructors
-            //like a non-void method, always get constructor for free
-            //every time create "new"
-            //default value for object
-            //same name as class and no return type
-
+            Console.WriteLine("");
+            double AverageAge = Person.SumOfAges / 4;
+            Console.WriteLine("Average Age: " + AverageAge);
+            Console.ReadKey();
         }
     }
 }
