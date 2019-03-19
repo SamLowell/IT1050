@@ -13,6 +13,12 @@ namespace FamilyHistory
         public string letterInitial;
         public string DeathDay;
 
+        public Person(string name, string letter)
+        {
+            this.Name = name;
+            this.letterInitial = letter;
+        }
+
         public void NameInitailBirthday()
         {
             System.Console.WriteLine(this.Name);

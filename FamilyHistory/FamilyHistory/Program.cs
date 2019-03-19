@@ -10,42 +10,28 @@ namespace FamilyHistory
     {
         static void Main(string[] args)
         {
-            Person Flossie = new Person();
-            Flossie.Name = "Florence Rockwell";
+            Person Flossie = new Person("Florence Rockwell", "F");
             Flossie.BirthDay = "October 27, 1918";
-            Flossie.letterInitial = "F";
-
-            Person Anna = new Person();
-            Anna.Name = "Anna Taber Edgerton";
+            
+            Person Anna = new Person("Anna Taber Edgerton", "A");
             Anna.BirthDay = "October 30, 1876";
             Anna.DeathDay = "November 17, 1957";
-            Anna.letterInitial = "A";
-
-            Person Walter = new Person();
-            Walter.Name = "Walter James Edgerton";
+            
+            Person Walter = new Person("Walter James Edgerton", "W");
             Walter.BirthDay = "January 11, 1871";
             Walter.DeathDay = "September 24, 1908";
-            Walter.letterInitial = "W";
-
-            Person Beth = new Person();
-            Beth.Name = "Elizabeth Edgerton Rockwell";
+            
+            Person Beth = new Person("Elizabeth Edgerton", "B");
             Beth.BirthDay = "June 10, 1908";
-            Beth.letterInitial = "B";
-
-            Person Louis = new Person();
-            Louis.Name = "Louis Rockwell";
+            
+            Person Louis = new Person("Louis Rockwell", "L");
             Louis.BirthDay = "January 28, 1914";
-            Louis.letterInitial = "L";
-
-            Person Mamie = new Person();
-            Mamie.Name = "Mabel Edgerton";
+            
+            Person Mamie = new Person("Mabel Edgerton", "M");
             Mamie.BirthDay = "May 1, 1912";
-            Mamie.letterInitial = "M";
-
-            Person Sam = new Person();
-            Sam.Name = "C. Franklin Rockwell";
-            Sam.letterInitial = "S";
-
+            
+            Person Sam = new Person("C. Franklin Rockwell", "S");
+            
             Anna.NameInitailBirthday();
             Walter.NameInitailBirthday();
             Beth.NameInitailBirthday();
