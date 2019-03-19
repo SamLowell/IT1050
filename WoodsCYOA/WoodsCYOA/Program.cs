@@ -17,11 +17,9 @@ namespace WoodsCYOA
             System.Console.ReadKey();
             Console.WriteLine("Ahead of you there is a dog and a cat.");
             System.Console.ReadKey();
-            
-            dog.Name = Console.ReadLine();
 
-            Console.Write("What is the cat's name? ");
-            cat.Name = Console.ReadLine();            
+            dog.GetName("dog's");
+            cat.GetName("cat's");                                 
 
             Console.WriteLine(dog.Name + " and " + cat.Name + " head in opposite directions.");
             //Reader chooses animal to follow once I learn how to do that.

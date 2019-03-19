@@ -10,13 +10,12 @@ namespace WoodsCYOA
     {
         public string Name;
 
-        public string GetDogName()
+        public string GetName(string animal)
         {
-            this.Name = "";
-            this.Name += "What is the dog's name? ";
-            this.Name += Console.ReadLine();
-            Console.WriteLine(this.Name);
-            return GetDogName();
+            Console.WriteLine("");
+            Console.WriteLine("What is the " + animal + " name? ");
+            return this.Name = Console.ReadLine();
+            
         }
 
 
