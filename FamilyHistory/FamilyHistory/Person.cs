@@ -8,10 +8,10 @@ namespace FamilyHistory
 {
     class Person
     {
-        public string Name;
-        public string BirthDay;
-        public string letterInitial;
-        public string DeathDay;
+        private string Name;
+        private string BirthDay;
+        private string letterInitial;
+        private string DeathDay;
 
         public Person(string name, string letter)
         {
@@ -27,6 +27,14 @@ namespace FamilyHistory
             System.Console.WriteLine(" ");
           
             
+        }
+        public void setBirthDay(string BirthDay)
+        {
+            this.BirthDay = BirthDay;
+        }
+        public void setDeathDay(string DeathDay)
+        {
+            this.DeathDay = DeathDay;
         }
     }
 }

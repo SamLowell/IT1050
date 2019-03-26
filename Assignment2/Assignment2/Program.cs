@@ -10,7 +10,7 @@ namespace Assignment2
     {
         static void Main(string[] args)
         {
-            Person.SumOfAges = 0;
+            
 
             Person person1 = new Person();
             person1.AskNameAge();
