@@ -11,7 +11,7 @@ namespace FamilyHistory
         private string Name;
         private string BirthDay;
         private string letterInitial;
-        private string DeathDay;
+        
 
         public Person(string name, string letter)
         {
@@ -28,13 +28,19 @@ namespace FamilyHistory
           
             
         }
-        public void setBirthDay(string BirthDay)
+        public string birthDay
         {
-            this.BirthDay = BirthDay;
+            get
+            {
+                return this.BirthDay;
+            }
+            set
+            {
+                this.BirthDay = value;
+            }
         }
-        public void setDeathDay(string DeathDay)
-        {
-            this.DeathDay = DeathDay;
-        }
+       
+        public string DeathDay { get; set; }
+        
     }
 }
