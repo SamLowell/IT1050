@@ -8,10 +8,16 @@ namespace FamilyHistory
 {
     class Person
     {
-        public string Name;
-        public string BirthDay;
-        public string letterInitial;
-        public string DeathDay;
+        private string Name;
+        private string BirthDay;
+        private string letterInitial;
+        
+
+        public Person(string name, string letter)
+        {
+            this.Name = name;
+            this.letterInitial = letter;
+        }
 
         public void NameInitailBirthday()
         {
@@ -22,5 +28,19 @@ namespace FamilyHistory
           
             
         }
+        public string birthDay
+        {
+            get
+            {
+                return this.BirthDay;
+            }
+            set
+            {
+                this.BirthDay = value;
+            }
+        }
+       
+        public string DeathDay { get; set; }
+        
     }
 }
