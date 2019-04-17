@@ -150,6 +150,7 @@ namespace Assignment4
 
             Console.WriteLine("Your total come to: $" + TotalCost);
             Console.ReadKey();
-        }
+
+            }
     }
 }
