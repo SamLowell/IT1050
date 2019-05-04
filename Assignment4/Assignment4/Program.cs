@@ -32,46 +32,43 @@ namespace Assignment4
                 if (numberTickets >= 1)
                 {
                     TotalnumberTickets += numberTickets;
-                    TotalCost += numberTickets * 5.99;
+                    TotalCost += numberTickets * Prices.MatineeAdult;
                 }
                 asknumberTickets("seniors");
                 if (numberTickets >= 1)
                 {
                     TotalnumberTickets += numberTickets;
-                    TotalCost += numberTickets * 4.50;
+                    TotalCost += numberTickets * Prices.MatineeSenior;
                 }
                 asknumberTickets("children");
                 if (numberTickets >= 1)
                 {
                     TotalnumberTickets += numberTickets;
-                    TotalCost += numberTickets * 3.99;
+                    TotalCost += numberTickets * Prices.MatineeChild;
                 }
             }
-            else if (time.ToLower().Contains("evening"))
+            else 
             {
                 asknumberTickets("adults");
                 if (numberTickets >= 1)
                 {
                     TotalnumberTickets += numberTickets;
-                    TotalCost += numberTickets * 10.99;
+                    TotalCost += numberTickets * Prices.EveningAdult;
                 }
                 asknumberTickets("seniors");
                 if (numberTickets >= 1)
                 {
                     TotalnumberTickets += numberTickets;
-                    TotalCost += numberTickets * 8.50;
+                    TotalCost += numberTickets * Prices.EveningSenior;
                 }
                 asknumberTickets("children");
                 if (numberTickets >= 1)
                 {
                     TotalnumberTickets += numberTickets;
-                    TotalCost += numberTickets * 6.99;
+                    TotalCost += numberTickets * Prices.EveningChild;
                 }
             }
-            else
-            {
-                Console.WriteLine("User Error.  Please try again.");
-            }
+            
                                
             int TotalPopcorn = 0;
             int TotallrgSoda = 0;
@@ -93,58 +90,57 @@ namespace Assignment4
                 if (numberConcessions >= 1)
                 {
                     TotallrgSoda += numberConcessions;
-                    TotalCost += numberConcessions * 5.99;
+                    TotalCost += numberConcessions * Prices.LargeSoda;
                 }
                 asknumberConcessions("small sodas");
                 if (numberConcessions >= 1)
                 {
-                    TotalCost += numberConcessions * 3.50;
+                    TotalCost += numberConcessions * Prices.SmallSoda;
                 }
                 asknumberConcessions("hot dogs");
                 if (numberConcessions >= 1)
                 {
-                    TotalCost += numberConcessions * 3.99;
+                    TotalCost += numberConcessions * Prices.HotDog;
                 }
                 asknumberConcessions("bags of popcorn");
                 if (numberConcessions >= 1)
                 {
                     TotalPopcorn += numberConcessions;
-                    TotalCost += numberConcessions * 4.50;
+                    TotalCost += numberConcessions * Prices.Popcorn;
                 }
                 asknumberConcessions("candies");
                 if(numberConcessions >= 1)
                 {
                     TotalCandies += numberConcessions;
-                    TotalCost += numberConcessions * 1.99;
+                    TotalCost += numberConcessions * Prices.Candies;
                 }
             }
 
-            //Discounts
-            ////popcorn and large soda and movie ticket = -$2
+            
             if (TotalPopcorn >=1 && TotallrgSoda >=1 && TotalnumberTickets >=1)
             {
                 if(TotalPopcorn < TotallrgSoda && TotalPopcorn < TotalnumberTickets)
                 {
-                    TotalCost -= TotalPopcorn * 2;
+                    TotalCost -= TotalPopcorn * Prices.Discount1;
                 }
                 else if (TotallrgSoda < TotalPopcorn && TotallrgSoda < TotalnumberTickets)
                 {
-                    TotalCost -= TotallrgSoda * 2;
+                    TotalCost -= TotallrgSoda * Prices.Discount1;
                 }
                 else
                 {
-                    TotalCost -= TotalnumberTickets * 2;
+                    TotalCost -= TotalnumberTickets * Prices.Discount1;
                 }
             }
-            /// evening tickets >= 3 and popcorn>=1  -$4.50
+            
             if (time.ToLower().Contains("evening") && TotalnumberTickets >=3 && TotalPopcorn >=1)
             {
-                TotalCost -= 4.5;
+                TotalCost -= Prices.Popcorn;
             }
-            /// (#of candies/4) * 1.99
+            
             if (TotalCandies >= 4)
             {
-                double discount = (TotalCandies / 4) * 1.99;
+                double discount = (TotalCandies / 4) * Prices.Candies;
                 TotalCost -= discount;
             }
 
