@@ -17,7 +17,12 @@ namespace Assignment5
             PrintBoard();
             movePiece();
             Console.ReadKey();
-           
+
+            //while (user inputs int within array)
+            //{
+        //      printBoard();
+        //      movePiece();
+        //     }
             
 
 
@@ -73,6 +78,7 @@ namespace Assignment5
                 int coordinateY = int.Parse(Console.ReadLine());
 
                 return board[coordinateY][coordinateX] = " ";
+                
             }
 
             string pickDestination()
@@ -88,6 +94,7 @@ namespace Assignment5
 
             void movePiece()
             {
+                
                 pickPiece();
                 pickDestination();
                 PrintBoard();
