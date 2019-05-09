@@ -10,20 +10,27 @@ namespace Assignment5
     {
         public const int SIZE = 8;
         public static string[][] board;
+        
 
         static void Main(string[] args)
         {
+            int coordinateX;
+            int coordinateY;
+            int newcoordinateX;
+            int newcoordinateY;
+            
+
             CreateBoard();
             PrintBoard();
             movePiece();
             Console.ReadKey();
 
-            //while (user inputs int within array)
-            //{
-        //      printBoard();
-        //      movePiece();
-        //     }
-            
+            while (coordinateX >= 0 && coordinateX <= 7 && coordinateY >= 0 && coordinateY <= 7 && newcoordinateX >= 0 && newcoordinateX <= 7 && newcoordinateY >= 0 && newcoordinateY <= 7)
+            {
+                
+                movePiece();
+            }
+
 
 
             void CreateBoard()
@@ -73,9 +80,13 @@ namespace Assignment5
             string pickPiece()
             {
                 promtUser("x");
-                int coordinateX = int.Parse(Console.ReadLine());
+                coordinateX = int.Parse(Console.ReadLine());
                 promtUser("y");
-                int coordinateY = int.Parse(Console.ReadLine());
+                coordinateY = int.Parse(Console.ReadLine());
+                if (coordinateX < 0 || coordinateX > 7 || coordinateY < 0 || coordinateY > 7)
+                {
+                    Environment.Exit(0);
+                }
 
                 return board[coordinateY][coordinateX] = " ";
                 
@@ -85,21 +96,26 @@ namespace Assignment5
             {
                 Console.WriteLine("Pick a location to move your piece. ");
                 promtUser("x");
-                int newcoordinateX = int.Parse(Console.ReadLine());
+                newcoordinateX = int.Parse(Console.ReadLine());
                 promtUser("y");
-                int newcoordinateY = int.Parse(Console.ReadLine());
+                newcoordinateY = int.Parse(Console.ReadLine());
+
+                if (newcoordinateX < 0 || newcoordinateX > 7 || newcoordinateY < 0 || newcoordinateY > 7)
+                {
+                    Environment.Exit(0);
+                }
 
                 return board[newcoordinateY][newcoordinateX] = "X";
             }
 
             void movePiece()
             {
-                
                 pickPiece();
                 pickDestination();
                 PrintBoard();
+
             }
 
-         }
+        }
     }
 }
